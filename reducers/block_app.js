@@ -1,16 +1,15 @@
 const color = "red"
-const addBlockReducer = (state={blocks:[]},action)=> {
-    var newState = {}
+const addBlockReducer = (state=[],action)=> {
+    var newState = state
     for (var key in state) {
         newState[key] = state[key]
     }
-    var blocks = newState.blocks
     if(action.type == "ADD") {
-        blocks.push({bg:'white',text:action.text})
+        newState.push({bg:'white',text:action.text})
     }
     if(action.type == "CHANGE") {
-        if(action.index<blocks.length) {
-            blocks[action.index].bg = (blocks[action.index].bg == "white")?"red":"white"
+        if(action.index<state.length) {
+            newState[action.index].bg = (newState[action.index].bg == "white")?"red":"white"
         }
     }
     return newState
