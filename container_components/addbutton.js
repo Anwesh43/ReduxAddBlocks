@@ -1,14 +1,15 @@
 import addBlock from '../actions/create_block'
 import {connect} from 'react-redux'
 import React,{PropTypes} from 'react'
-const AddButton = ({dispatch})=>{
+const AddBtn = ({dispatch})=>{
     var onClick = ()=>{
-        dispatch(addBlock(this.refs.t1.value))
+        console.log("clicked")
+        dispatch(addBlock(document.getElementById('t1').value))
     }
-    <div>
-      <input type='text' ref='t1'/>
-      <button onClick={onClick}>suBMIT</button>
+    return <div>
+      <input type='text' id='t1'/>
+      <button onClick={onClick}> Submit </button>
     </div>
 }
-AddButton = connect()(AddButton)
+const AddButton = connect()(AddBtn)
 export default AddButton
