@@ -6,5 +6,8 @@ const BlockComponent = ({block,onClick}) => {
         {block.text}
     </div>
 }
-BlockComponent.propTypes ={block: PropTypes.shape({bg:PropTypes.string.isRequired,text:PropTypes.string.isRequired}),onClick:PropTypes.func.isRequired}
+BlockComponent.propTypes ={
+  block: PropTypes.shape({bg:PropTypes.string.isRequired,text:PropTypes.string.isRequired}).isRequired,
+  onClick:PropTypes.func.isRequired
+}
 export default BlockComponent
