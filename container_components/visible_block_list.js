@@ -2,6 +2,7 @@ import BlockListComponent from '../presentational_components/block_list_componen
 import toggleColor from '../actions/toggle_color'
 import {connect} from 'react-redux'
 const mapStateToProps = (state)=>{
+    console.log('coming here for add block')
     var blocks = state.blocks.map((block)=>{
       return {bg:block.bg,text:block.text}
     })
