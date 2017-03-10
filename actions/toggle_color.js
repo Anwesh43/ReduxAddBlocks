@@ -1,4 +1,4 @@
-const toggleColor = (index)=>{
-    return {type:'CHANGE',index}
+const toggleColor = (index,color)=>{
+    return {type:'CHANGE',index,color}
 }
 export default toggleColor
